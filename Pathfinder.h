@@ -45,8 +45,7 @@ public:
             }
 
             string upDir;
-            upDir += currpath;
-            upDir += "/..";
+            upDir = "../" + currpath ;
 
             DIR *dir = opendir(upDir.c_str());
 
@@ -85,7 +84,7 @@ public:
                 }
             }
             closedir(dir);
-            currpath += "/..";
+            currpath = "../"+ currpath;
         }
     }
 
@@ -120,8 +119,7 @@ public:
             }
 
             string upDir;
-            upDir += currpath;
-            upDir += "/..";
+            upDir = "../"+ currpath;
 
             DIR *dir = opendir(upDir.c_str());
 
@@ -192,7 +190,7 @@ public:
                 }
             }
             closedir(dir);
-            currpath += "/..";
+            currpath = "../"+ currpath;
         }
         return 0;
     }
