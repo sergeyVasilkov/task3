@@ -15,6 +15,7 @@ string pwd() {
     string resultPath = string();
     char *buffer = new char[1024];
     resultPath = string(getwd(buffer));
+    delete[] buffer;
     return resultPath;
 }
 
